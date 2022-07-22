@@ -1,5 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Courses from '../components/courses/Courses';
+import Hero from '../components/Hero';
+import TheHeader from '../components/TheHeader';
 
 const Home: NextPage = () => {
   return (
@@ -13,8 +16,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <TheHeader />
+
       <main>
-        <h1>Hello, World!</h1>
+        <Hero />
+        <Courses />
       </main>
 
       <footer className="mt-8 text-center px-4">
