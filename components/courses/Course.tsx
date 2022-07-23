@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { ICourse } from '../../data/data';
+import Button, { ButtonVariants } from '../Button';
 
 interface ICourseProps {
   course: ICourse;
@@ -9,16 +10,17 @@ interface ICourseProps {
 const Course: React.FC<ICourseProps> = ({ course }) => {
   const { icon, title, text, primaryActionText } = course;
   return (
-    <div className="relative rounded-lg p-4 shadow-lg min-h-[12rem]">
-      <div className="absolute top-0 -translate-y-1/2 z-10">
+    <div className="relative rounded-lg p-8 shadow-lg min-h-[16rem] h-full">
+      <div className="absolute top-0 -translate-y-1/2">
         <Image src={icon} alt={`Icon ${title}`} width={56} height={56} />
       </div>
-      <div className="flex flex-col items-start jut">
+      <div className="grid gap-2 h-full">
         <div>
-          <h2>{title}</h2>
-          <p>{text}</p>
+          <h2 className="font-bold text-lg mt-6 mb-2">{title}</h2>
+          <p className="text-app-gray">{text}</p>
         </div>
-        <button>{primaryActionText}</button>
+
+        <Button variant={ButtonVariants.text}>{primaryActionText}</Button>
       </div>
     </div>
   );

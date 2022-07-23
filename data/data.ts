@@ -2,7 +2,7 @@ export interface ICourse {
   icon: string;
   title: string;
   text: string;
-  primaryActionText: string;
+  primaryActionText?: string;
 }
 
 export const coursesData: ICourse[] = [

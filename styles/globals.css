@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .bg-gradient-white-blue {
+    @apply from-white to-app-blue-light;
+  }
+
+  .bg-gradient-orange-pink {
+    @apply from-app-gradient-orange to-app-gradient-pink;
+  }
+
+  .bg-gradient-blue-pink {
+    @apply from-app-gradient-blue to-app-gradient-pink;
+  }
+}

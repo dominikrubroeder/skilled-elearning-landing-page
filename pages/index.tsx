@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Courses from '../components/courses/Courses';
 import Hero from '../components/Hero';
+import StickyBar from '../components/StickyBar';
 import TheHeader from '../components/TheHeader';
 
 const Home: NextPage = () => {
@@ -18,12 +19,13 @@ const Home: NextPage = () => {
 
       <TheHeader />
 
-      <main>
+      <main className="grid gap-8">
         <Hero />
         <Courses />
+        <StickyBar />
       </main>
 
-      <footer className="mt-8 text-center px-4">
+      <footer className="mt-20 text-center px-4 text-app-gray text-xs">
         Frontend challenge by{' '}
         <a
           href="https://www.frontendmentor.io/challenges/skilled-elearning-landing-page-S1ObDrZ8q"
