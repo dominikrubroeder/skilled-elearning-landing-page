@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { ICourse } from '../../data/data';
-import Button, { ButtonVariants } from '../Button';
+import Button from '../Button';
 
 interface ICourseProps {
   course: ICourse;
@@ -20,7 +20,7 @@ const Course: React.FC<ICourseProps> = ({ course }) => {
           <p className="text-app-gray">{text}</p>
         </div>
 
-        <Button variant={ButtonVariants.text}>{primaryActionText}</Button>
+        <Button variant="Link">{primaryActionText}</Button>
       </div>
     </div>
   );
