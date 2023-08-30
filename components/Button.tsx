@@ -2,18 +2,11 @@ import React from 'react';
 
 interface ButtonProps {
   children?: React.ReactNode;
-  variant: string;
-}
-
-export enum ButtonVariants {
-  text = 'LINK',
-  contained = 'CONTAINED',
-  containedGradientOrangePink = 'CONTAINED_GRADIENT_ORANGE_PINK',
-  containedGradientViolettPink = 'CONTAINED_GRADIENT_VIOLETT_PINK',
+  variant: 'Link' | 'Contained' | 'Gradient-Orange-Pink' | 'Gradient-Blue-Pink';
 }
 
 const Button: React.FC<ButtonProps> = ({ children, variant }) => {
-  if (variant === ButtonVariants.text) {
+  if (variant === 'Link') {
     return (
       <button className="text-app-pink-saturated font-semibold justify-self-start">
         {children}
@@ -21,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({ children, variant }) => {
     );
   }
 
-  if (variant === ButtonVariants.containedGradientOrangePink) {
+  if (variant === 'Gradient-Orange-Pink') {
     return (
       <button className="p-3 px-6 rounded-full bg-gradient-to-b bg-gradient-orange-pink text-white justify-self-start">
         {children}
@@ -29,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({ children, variant }) => {
     );
   }
 
-  if (variant === ButtonVariants.containedGradientViolettPink) {
+  if (variant === 'Gradient-Blue-Pink') {
     return (
       <button className="p-3 px-6 rounded-full bg-gradient-to-b bg-gradient-blue-pink text-white justify-self-start">
         {children}
