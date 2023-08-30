@@ -1,12 +1,8 @@
 import React from 'react';
 import Course from './Course';
-import { ICourse } from '../../data/data';
+import {coursesData} from "../../data/data";
 
-interface ICoursesList {
-  coursesData: ICourse[];
-}
-
-const CourseList: React.FC<ICoursesList> = ({ coursesData }) => {
+const CourseList: React.FC = () => {
   return (
     <ul className="grid gap-4 gap-y-16" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))' }}>
       <li>
