@@ -4,7 +4,7 @@ interface TheLogoProps {
   variant?: string;
 }
 
-const TheLogo: React.FC<TheLogoProps> = ({ variant }) => {
+const Logo: React.FC<TheLogoProps> = ({ variant }) => {
   if (variant === 'dark')
     return (
       <svg width="112" height="29" xmlns="http://www.w3.org/2000/svg">
@@ -23,4 +23,4 @@ const TheLogo: React.FC<TheLogoProps> = ({ variant }) => {
   );
 };
 
-export default TheLogo;
+export default Logo;
