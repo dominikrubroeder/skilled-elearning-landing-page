@@ -1,7 +1,6 @@
-import Image from 'next/image';
-import React from 'react';
-import { ICourse } from '../../data/data';
-import Button from '../Button';
+import React from "react";
+import { ICourse } from "../../data/data";
+import Button from "../Button";
 
 interface ICourseProps {
   course: ICourse;
@@ -9,14 +8,13 @@ interface ICourseProps {
 
 const Course: React.FC<ICourseProps> = ({ course }) => {
   const { icon, title, text, primaryActionText } = course;
+
   return (
-    <div className="relative rounded-lg p-8 shadow-lg min-h-[16rem] h-full">
-      <div className="absolute top-0 -translate-y-1/2">
-        <Image src={icon} alt={`Icon ${title}`} width={56} height={56} />
-      </div>
-      <div className="grid gap-2 h-full">
+    <div className="relative h-full min-h-[16rem] rounded-lg p-8 shadow-lg">
+      <div className="absolute top-0 -translate-y-1/2">{icon}</div>
+      <div className="grid h-full gap-2">
         <div>
-          <h2 className="font-bold text-lg mt-6 mb-2">{title}</h2>
+          <h2 className="mt-6 mb-2 text-lg font-bold">{title}</h2>
           <p className="text-app-gray">{text}</p>
         </div>
 
